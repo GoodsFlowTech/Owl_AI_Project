@@ -1,0 +1,36 @@
+code 
+import streamlit as st
+st.set_page_config(page_title="Owl AI Assistant", page_icon="🦉", layout="centered")
+st.title("🦉 Owl AI - Your Smart Python Assistant")
+st.write("""
+Welcome to **Owl AI**, a simple demo web app built with Streamlit.
+Ask questions or give commands and select a mode to get instant responses.
+This app demonstrates a Python developer’s ability to create an interactive web interface.
+""")
+user_input = st.text_input("💬 Ask Owl AI something:")
+mode = st.selectbox("Select a mode:", ["Explain", "Summarize", "Translate", "Joke", "Advice"])
+def owl_ai_response(user_text, mode):
+    if not user_text:
+        return "Please enter a question above."
+    if mode == "Explain":
+        return f"Owl AI explains: '{user_text}' is a concept that can be understood by breaking it down into simple terms."
+    elif mode == "Summarize":
+        return f"Owl AI summary: The main idea of '{user_text}' is to simplify complex information."
+    elif mode == "Translate":
+        return f"Owl AI translation: '{user_text}' means the same in every language of curiosity!"
+    elif mode == "Joke":
+        return "Why did the Python developer go broke? Because he used up all his cache! 🐍😂"
+    elif mode == "Advice":
+        return "Always keep learning — even the wisest owl started as a curious hatchling! 🦉"
+    else:
+        return "Owl AI is thinking..."
+
+if st.button("🪶 Ask Owl AI"):
+    response = owl_ai_response(user_input, mode)
+    st.subheader("🦉 Owl AI says:")
+    st.success(response)
+st.markdown("""
+💡 **Created by:** Your Name  
+📚 **Tech Used:** Python, Streamlit  
+🎯 **Purpose:** Python Developer Task 2 – Simple Web Interface
+""")
