@@ -1,0 +1,39 @@
+Instructions to Run Owl AI App
+1️⃣ Download & Prepare the Project
+•	Download the Owl_AI_Project.zip file from Google Drive or GitHub.
+•	Unzip it to a folder on your computer.
+
+2️⃣ Open Terminal
+•	Open VS Code Terminal or Command Prompt.
+•	Navigate to the project folder:
+cd "C:\path\to\Owl_AI_Project"
+Replace "C:\path\to\" with your actual folder location.
+
+3️⃣ (Optional) Create Virtual Environment
+•	Recommended to avoid conflicts with other Python packages:
+python -m venv venv
+.\venv\Scripts\activate
+•	Terminal should show (venv) at the start.
+•	If PowerShell blocks activation, run:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+.\venv\Scripts\activate
+
+4️⃣ Install Dependencies
+•	Install all required packages:
+pip install -r requirements.txt
+•	This installs Streamlit and any other dependencies.
+
+5️⃣ Run the App
+•	Start the Streamlit app:
+streamlit run owl_ai_app.py
+•	A browser window will open automatically at:
+http://localhost:8501
+•	Your Owl AI interface is ready to use.
+
+6️⃣ Stop the App
+•	When finished, press CTRL + C in the terminal to stop the Streamlit server.
+
+7️⃣ Notes
+•	Always run streamlit run owl_ai_app.py from the terminal, not inside Python (>>>).
+•	If Streamlit is not recognized, make sure Python and pip are installed and you have activated your virtual environment.
+
